@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="smartech-cordova-plugin" version="1.0.0"
+	xmlns="http://apache.org/cordova/ns/plugins/1.0"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<name>Smartech Push Notifications</name>
+	<author>Netcore Solutions</author>
+    <description>Smartech SDK's Cordova Plugin For Cordova/Phonegap/Ionic based projects</description>
+    <license>Apache 2.0</license>
+    <keywords>smartech, netcore, push, notification, push notification, apns, fcm, messaging, ios, android</keywords>
+    <repo>https://github.com/NetcoreSolutions/Smartech-Cordova-Plugin.git</repo>
+	
+	<js-module name="SmartechCordova" src="www/SmartechCordova.js">
+		<clobbers target="SmartechCordova" />
+	</js-module>
+
+	<!-- iOS -->
+	<platform name="ios">
+		<podspec>
+			<config>
+				<source url="https://github.com/CocoaPods/Specs.git"/>
+			</config>
+			<pods use-frameworks="true">
+				<pod name="Smartech-iOS-SDK" spec="~> 3.0.2" />
+			</pods>
+		</podspec>
+		<config-file parent="/*" target="config.xml">
+			<feature name="SmartechCordova">
+				<param name="ios-package" value="SmartechCordova" />
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
+		<header-file src="src/ios/SmartechCordova.h" />
+        <source-file src="src/ios/SmartechCordova.m" />
+	</platform>
+	
+	<!-- Android -->
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="SmartechCordova">
+				<param name="android-package" value="com.netcore.cordova.SmartechCordova" />
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml"></config-file>
+		<source-file src="src/android/SmartechCordova.java" target-dir="src/com/netcore/cordova/" />
+		<config-file target="config.xml" parent="/*">
+			<preference name="AndroidXEnabled" value="true" />
+			<preference name="GradlePluginGoogleServicesEnabled" value="true" />
+		</config-file>
+	</platform>
+</plugin>

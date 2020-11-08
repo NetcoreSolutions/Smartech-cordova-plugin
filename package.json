@@ -1,0 +1,34 @@
+{
+  "name": "smartech-cordova-plugin",
+  "version": "1.0.2",
+  "description": "Smartech SDK's Cordova Plugin For Cordova/Phonegap/Ionic Based Projects",
+  "cordova": {
+    "id": "smartech-cordova-plugin",
+    "platforms": [
+      "ios",
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NetcoreSolutions/Smartech-Cordova-Plugin.git"
+  },
+  "keywords": [
+    "smartech",
+    "netcore",
+    "push",
+    "notification",
+    "push notification",
+    "apns",
+    "fcm",
+    "messaging",
+    "ios",
+    "android"
+  ],
+  "author": "Netcore Solutions",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/NetcoreSolutions/Smartech-Cordova-Plugin/issues"
+  },
+  "homepage": "https://github.com/NetcoreSolutions/Smartech-Cordova-Plugin#readme"
+}
